@@ -1,0 +1,19 @@
+﻿<!-- Jumbotron -->
+<div class="jumbotron">
+    <h1>BookStore!</h1>
+    <input type="text" class="form-control input-lg input-block" placeholder="Search here for author, genre, title... Free search" ng-model="searchterm" ng-change="filter()" />
+</div>
+
+<div class="row">
+    <div class="col-sm-12" ng-show="isSearchterm">
+        <h3>Resultatet för sökfras: {{searchterm}}</h3>
+    </div>
+    <div class="col-sm-6 col-md-4" ng-repeat="book in books">
+        <div class="thumbnail">
+            <div class="caption">
+                <h3>{{book.Title}}</h3>
+                <p><a href="#/books/{{book.Id}}" class="btn btn-default" role="button">Läs mer</a></p>
+            </div>
+        </div>
+    </div>
+</div>

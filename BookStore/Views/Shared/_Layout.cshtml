@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html ng-app="BookStoreApp">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link href="~/Content/site.css" rel="stylesheet" />
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+    <body>
+        <div class="container">
+
+            <div class="masthead">
+                <h3 class="text-muted">BookStore for Sigma</h3>
+                <ul class="nav nav-justified">
+                    <li><a href="/#/">Homepage</a></li>
+                    <li><a href="/#/books">All our books</a></li>
+                    <li><a href="/help">Api documents</a></li>
+                </ul>
+            </div>
+
+            
+
+            @RenderBody()
+
+            <!-- Site footer -->
+            <div class="footer">
+                <p>&copy; Company 2014</p>
+            </div>
+
+        </div> <!-- /container -->
+    </body>
+@Scripts.Render("~/bundles/jquery")
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+@RenderSection("scripts", required: false)
+<script src="~/Scripts/angular.min.js"></script>
+<script src="~/Scripts/angular-route.min.js"></script>
+<script src="~/Scripts/app/app.js"></script>
+<script src="~/Scripts/app/Controllers/BookContollers.js"></script>
+</html>
