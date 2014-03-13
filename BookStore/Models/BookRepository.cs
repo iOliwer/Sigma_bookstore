@@ -50,7 +50,7 @@ namespace BookStore.Models
         {
             var booksFromXml =
                 booksInStore
-                    .Where(x => x.ToString().ToLower().Contains(searchTerm.ToLower()))
+                    .Where(x => x.Value.ToLower().Contains(searchTerm.ToLower()))
                     .Select(x => new Book
                     {
                         Title = (string) x.Element("title"),
